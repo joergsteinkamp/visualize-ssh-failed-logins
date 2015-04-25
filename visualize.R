@@ -114,6 +114,12 @@ users <- users[order(users$name, decreasing = TRUE),]
 users$name <- factor(users$name, levels=users$name[order(users$N)])
 
 ### visualize
+###
+### only a subset is displayed (command "subset" within each "ggplot" command).
+### This and the width and height options have to be adjusted to each database,
+### otherwise to little or to much data is selected and the output graphics 
+### are not readable anymore.
+###
 if (require(cairoDevice)) {
   Cairo_png("user.png", width=9, height=12)
 } else {
