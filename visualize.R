@@ -6,7 +6,7 @@ library(ggplot2)
 library(plyr)
 
 ### available here: http://www.r-bloggers.com/retrieve-ip-asn-bgp-peer-info-with-r/
-source("~/lib/R/bulkorigin.R")
+source("bulkorigin.R")
 
 update_db <- function(dbcon) {
   if (!any(dbListTables(dbcon) == "subnet")) 
